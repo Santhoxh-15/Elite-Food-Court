@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Elite Food Court - Settings</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        🍽️ <span>ELITE FOOD COURT</span>
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="breakfast.html">Breakfast</a>
+
+        <a href="lunch.html">Lunch</a>
+
+        <a href="dinner.html">Dinner</a>
+
+        <a href="drinks.html">Drinks</a>
+
+        <a href="offers.html">Offers</a>
+
+    </nav>
+
+    <div class="header-buttons">
+
+        <a href="profile.html">
+            <button>👤</button>
+        </a>
+
+    </div>
+
+</header>
+
+
+<section class="page-title">
+
+    <p class="small-title">
+        PERSONAL SETTINGS
+    </p>
+
+    <h1>
+        Settings ⚙️
+    </h1>
+
+    <p>
+        Customize your Elite Food Court experience.
+    </p>
+
+</section>
+
+
+<section class="settings-section">
+
+
+    <div class="settings-card">
+
+        <h2>
+            ⚙️ General Settings
+        </h2>
+
+
+        <div class="setting-row">
+
+            <div>
+                <h3>
+                    Notifications
+                </h3>
+
+                <p>
+                    Receive offers and order updates.
+                </p>
+            </div>
+
+            <input
+                type="checkbox"
+                checked
+                onchange="saveSetting('Notifications')"
+            >
+
+        </div>
+
+
+        <div class="setting-row">
+
+            <div>
+                <h3>
+                    Special Offers
+                </h3>
+
+                <p>
+                    Get updates about new offers.
+                </p>
+            </div>
+
+            <input
+                type="checkbox"
+                checked
+                onchange="saveSetting('Special Offers')"
+            >
+
+        </div>
+
+
+        <div class="setting-row">
+
+            <div>
+                <h3>
+                    Save Favourite Foods
+                </h3>
+
+                <p>
+                    Save foods that you like.
+                </p>
+            </div>
+
+            <input
+                type="checkbox"
+                checked
+                onchange="saveSetting('Favourite Foods')"
+            >
+
+        </div>
+
+    </div>
+
+
+    <div class="settings-card">
+
+        <h2>
+            🔗 Quick Links
+        </h2>
+
+
+        <a href="profile.html"
+           class="setting-link">
+
+            👤 My Profile
+
+        </a>
+
+
+        <a href="offers.html"
+           class="setting-link">
+
+            🎁 Today's Offers
+
+        </a>
+
+
+        <a href="index.html"
+           class="setting-link">
+
+            🏠 Home
+
+        </a>
+
+    </div>
+
+
+</section>
+
+
+<div class="back-home">
+
+    <a href="index.html"
+       class="main-btn">
+
+        ← Back To Home
+
+    </a>
+
+</div>
+
+
+<footer>
+
+    <h3>🍽️ ELITE FOOD COURT</h3>
+
+    <p>
+        Authentic South Indian Food With Love ❤️
+    </p>
+
+    <p>
+        © 2026 Elite Food Court
+    </p>
+
+</footer>
+
+
+<div class="message"
+     id="message">
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

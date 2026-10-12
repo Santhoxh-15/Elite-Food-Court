@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Food Court - Lunch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        🍽️ <span>ELITE FOOD COURT</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="breakfast.html">Breakfast</a>
+        <a href="lunch.html" class="active-link">Lunch</a>
+        <a href="dinner.html">Dinner</a>
+        <a href="drinks.html">Drinks</a>
+        <a href="offers.html">Offers</a>
+    </nav>
+
+    <div class="header-buttons">
+        <a href="login.html">
+            <button>Login</button>
+        </a>
+
+        <a href="profile.html">
+            <button>👤</button>
+        </a>
+
+        <button onclick="showCart()">
+            🛒 <span id="cartCount">0</span>
+        </button>
+    </div>
+
+</header>
+
+
+<section class="page-title">
+
+    <p class="small-title">
+        AFTERNOON SPECIAL
+    </p>
+
+    <h1>
+        Delicious Lunch 🍛
+    </h1>
+
+    <p>
+        Enjoy traditional South Indian meals
+        and tasty lunch varieties.
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <div class="heading">
+
+        <p>LUNCH MENU</p>
+
+        <h2>
+            Choose Your Favourite 😋
+        </h2>
+
+    </div>
+
+
+    <input
+        type="text"
+        id="search"
+        placeholder="🔍 Search lunch..."
+        onkeyup="searchFood()"
+    >
+
+
+    <div class="food-container">
+
+
+        <!-- SOUTH INDIAN MEALS -->
+
+        <div class="food-card" data-name="South Indian Meals">
+
+            <img
+                src="https://loremflickr.com/600/400/south,indian,meals?lock=201"
+                alt="South Indian Meals">
+
+            <div class="food-info">
+
+                <h3>South Indian Meals</h3>
+
+                <p>
+                    Rice, sambar, rasam, poriyal,
+                    kootu and curd.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹180</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('South Indian Meals',180)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MINI MEALS -->
+
+        <div class="food-card" data-name="Mini Meals">
+
+            <img
+                src="https://loremflickr.com/600/400/indian,thali?lock=202"
+                alt="Mini Meals">
+
+            <div class="food-info">
+
+                <h3>Mini Meals</h3>
+
+                <p>
+                    A tasty mini lunch with
+                    rice, curry and curd.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹130</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Mini Meals',130)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- VEG BIRYANI -->
+
+        <div class="food-card" data-name="Veg Biryani">
+
+            <img
+                src="https://loremflickr.com/600/400/vegetable,biryani?lock=203"
+                alt="Veg Biryani">
+
+            <div class="food-info">
+
+                <h3>Veg Biryani</h3>
+
+                <p>
+                    Fragrant rice cooked with fresh
+                    vegetables and spices.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹160</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Veg Biryani',160)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- VEG PULAO -->
+
+        <div class="food-card" data-name="Veg Pulao">
+
+            <img
+                src="https://loremflickr.com/600/400/vegetable,pulao?lock=204"
+                alt="Veg Pulao">
+
+            <div class="food-info">
+
+                <h3>Veg Pulao</h3>
+
+                <p>
+                    Aromatic rice cooked with
+                    fresh vegetables.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹140</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Veg Pulao',140)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PANEER BUTTER MASALA -->
+
+        <div class="food-card" data-name="Paneer Butter Masala">
+
+            <img
+                src="https://loremflickr.com/600/400/paneer,butter,masala?lock=205"
+                alt="Paneer Butter Masala">
+
+            <div class="food-info">
+
+                <h3>Paneer Butter Masala</h3>
+
+                <p>
+                    Soft paneer cooked in creamy
+                    tomato gravy.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹190</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Paneer Butter Masala',190)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PANEER GHEE ROAST -->
+
+        <div class="food-card" data-name="Paneer Ghee Roast">
+
+            <img
+                src="https://loremflickr.com/600/400/paneer,roast?lock=206"
+                alt="Paneer Ghee Roast">
+
+            <div class="food-info">
+
+                <h3>Paneer Ghee Roast</h3>
+
+                <p>
+                    Spicy paneer roasted with
+                    aromatic ghee masala.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹220</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Paneer Ghee Roast',220)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MUSHROOM -->
+
+        <div class="food-card" data-name="Mushroom Masala">
+
+            <img
+                src="https://loremflickr.com/600/400/mushroom,masala?lock=207"
+                alt="Mushroom Masala">
+
+            <div class="food-info">
+
+                <h3>Mushroom Masala</h3>
+
+                <p>
+                    Fresh mushrooms cooked in
+                    spicy masala.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹180</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Mushroom Masala',180)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- VEG FRIED RICE -->
+
+        <div class="food-card" data-name="Veg Fried Rice">
+
+            <img
+                src="https://loremflickr.com/600/400/vegetable,fried,rice?lock=208"
+                alt="Veg Fried Rice">
+
+            <div class="food-info">
+
+                <h3>Veg Fried Rice</h3>
+
+                <p>
+                    Fried rice tossed with fresh
+                    vegetables and sauces.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹150</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Veg Fried Rice',150)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- LEMON RICE -->
+
+        <div class="food-card" data-name="Lemon Rice">
+
+            <img
+                src="https://loremflickr.com/600/400/lemon,rice?lock=209"
+                alt="Lemon Rice">
+
+            <div class="food-info">
+
+                <h3>Lemon Rice</h3>
+
+                <p>
+                    Tangy lemon rice with peanuts
+                    and seasoning.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹90</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Lemon Rice',90)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TOMATO RICE -->
+
+        <div class="food-card" data-name="Tomato Rice">
+
+            <img
+                src="https://loremflickr.com/600/400/tomato,rice?lock=210"
+                alt="Tomato Rice">
+
+            <div class="food-info">
+
+                <h3>Tomato Rice</h3>
+
+                <p>
+                    Spicy tomato flavoured rice
+                    with fresh herbs.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹90</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Tomato Rice',90)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SAMBAR RICE -->
+
+        <div class="food-card" data-name="Sambar Rice">
+
+            <img
+                src="https://loremflickr.com/600/400/sambar,rice?lock=211"
+                alt="Sambar Rice">
+
+            <div class="food-info">
+
+                <h3>Sambar Rice</h3>
+
+                <p>
+                    Comforting rice mixed with
+                    delicious sambar.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹100</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Sambar Rice',100)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CURD RICE -->
+
+        <div class="food-card" data-name="Curd Rice">
+
+            <img
+                src="https://loremflickr.com/600/400/curd,rice?lock=212"
+                alt="Curd Rice">
+
+            <div class="food-info">
+
+                <h3>Curd Rice</h3>
+
+                <p>
+                    Cool and creamy curd rice
+                    with pickle.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹70</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Curd Rice',70)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CHAPATI KURMA -->
+
+        <div class="food-card" data-name="Chapati Kurma">
+
+            <img
+                src="https://loremflickr.com/600/400/chapati,kurma?lock=213"
+                alt="Chapati Kurma">
+
+            <div class="food-info">
+
+                <h3>Chapati & Kurma</h3>
+
+                <p>
+                    Soft chapati served with
+                    tasty vegetable kurma.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹120</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Chapati & Kurma',120)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- VEG MEALS COMBO -->
+
+        <div class="food-card" data-name="Veg Meals Combo">
+
+            <img
+                src="https://loremflickr.com/600/400/vegetarian,thali?lock=214"
+                alt="Veg Meals Combo">
+
+            <div class="food-info">
+
+                <h3>Veg Meals Combo</h3>
+
+                <p>
+                    Rice, curry, poriyal,
+                    sambar, rasam and curd.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹200</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Veg Meals Combo',200)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<div class="back-home">
+
+    <a href="index.html" class="main-btn">
+        ← Back To Home
+    </a>
+
+</div>
+
+
+<footer>
+
+    <h3>🍽️ ELITE FOOD COURT</h3>
+
+    <p>
+        Authentic South Indian Food With Love ❤️
+    </p>
+
+    <p>
+        © 2026 Elite Food Court
+    </p>
+
+</footer>
+
+
+<!-- CART POPUP -->
+
+<div class="popup" id="cartPopup">
+
+    <div class="popup-box">
+
+        <button class="close"
+                onclick="closePopup('cartPopup')">
+            ×
+        </button>
+
+        <h2>Your Cart 🛒</h2>
+
+        <p>Your selected foods</p>
+
+        <div id="cartItems"></div>
+
+        <h3 id="cartTotal">
+            Total: ₹0
+        </h3>
+
+        <button class="main-btn"
+                onclick="checkout()">
+            Place Order
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="message" id="message"></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

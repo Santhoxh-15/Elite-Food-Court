@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Elite Food Court - Dinner</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        🍽️ <span>ELITE FOOD COURT</span>
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="breakfast.html">
+            Breakfast
+        </a>
+
+        <a href="lunch.html">
+            Lunch
+        </a>
+
+        <a href="dinner.html"
+           class="active-link">
+            Dinner
+        </a>
+
+        <a href="drinks.html">
+            Drinks
+        </a>
+
+        <a href="offers.html">
+            Offers
+        </a>
+
+    </nav>
+
+    <div class="header-buttons">
+
+        <a href="login.html">
+            <button>Login</button>
+        </a>
+
+        <a href="profile.html">
+            <button>👤</button>
+        </a>
+
+        <button onclick="showCart()">
+            🛒 <span id="cartCount">0</span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<section class="page-title">
+
+    <p class="small-title">
+        EVENING SPECIAL
+    </p>
+
+    <h1>
+        Delicious Dinner 🌙
+    </h1>
+
+    <p>
+        Enjoy tasty South Indian dinner
+        favourites with your family.
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <div class="heading">
+
+        <p>DINNER MENU</p>
+
+        <h2>
+            Evening Favourites 😋
+        </h2>
+
+    </div>
+
+
+    <input
+        type="text"
+        id="search"
+        placeholder="🔍 Search dinner..."
+        onkeyup="searchFood()"
+    >
+
+
+    <div class="food-container">
+
+
+        <!-- PAROTTA -->
+
+        <div class="food-card"
+             data-name="Parotta Salna">
+
+            <img
+                src="https://loremflickr.com/600/400/parotta?lock=301"
+                alt="Parotta">
+
+            <div class="food-info">
+
+                <h3>Parotta & Salna</h3>
+
+                <p>
+                    Soft layered parotta served
+                    with spicy salna.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹100</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Parotta & Salna',100)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- KOTHU PAROTTA -->
+
+        <div class="food-card"
+             data-name="Veg Kothu Parotta">
+
+            <img
+                src="https://loremflickr.com/600/400/kothu,parotta?lock=302"
+                alt="Kothu Parotta">
+
+            <div class="food-info">
+
+                <h3>Veg Kothu Parotta</h3>
+
+                <p>
+                    Chopped parotta mixed with
+                    vegetables and masala.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹150</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Veg Kothu Parotta',150)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MASALA DOSA -->
+
+        <div class="food-card"
+             data-name="Masala Dosa">
+
+            <img
+                src="https://loremflickr.com/600/400/masala,dosa?lock=303"
+                alt="Masala Dosa">
+
+            <div class="food-info">
+
+                <h3>Masala Dosa</h3>
+
+                <p>
+                    Crispy dosa with delicious
+                    potato masala.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹120</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Masala Dosa',120)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MYSORE DOSA -->
+
+        <div class="food-card"
+             data-name="Mysore Masala Dosa">
+
+            <img
+                src="https://loremflickr.com/600/400/mysore,dosa?lock=304"
+                alt="Mysore Masala Dosa">
+
+            <div class="food-info">
+
+                <h3>Mysore Masala Dosa</h3>
+
+                <p>
+                    Spicy Mysore dosa with
+                    red chutney and masala.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹150</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Mysore Masala Dosa',150)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ONION DOSA -->
+
+        <div class="food-card"
+             data-name="Onion Dosa">
+
+            <img
+                src="https://loremflickr.com/600/400/onion,dosa?lock=305"
+                alt="Onion Dosa">
+
+            <div class="food-info">
+
+                <h3>Onion Dosa</h3>
+
+                <p>
+                    Crispy dosa topped with
+                    fresh onion and spices.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹130</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Onion Dosa',130)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RAVA DOSA -->
+
+        <div class="food-card"
+             data-name="Rava Dosa">
+
+            <img
+                src="https://loremflickr.com/600/400/rava,dosa?lock=306"
+                alt="Rava Dosa">
+
+            <div class="food-info">
+
+                <h3>Rava Dosa</h3>
+
+                <p>
+                    Thin and crispy rava dosa
+                    served with chutney.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹120</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Rava Dosa',120)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PANEER DOSA -->
+
+        <div class="food-card"
+             data-name="Paneer Dosa">
+
+            <img
+                src="https://loremflickr.com/600/400/paneer,dosa?lock=307"
+                alt="Paneer Dosa">
+
+            <div class="food-info">
+
+                <h3>Paneer Dosa</h3>
+
+                <p>
+                    Crispy dosa filled with
+                    spicy paneer masala.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹170</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Paneer Dosa',170)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CHEESE DOSA -->
+
+        <div class="food-card"
+             data-name="Cheese Dosa">
+
+            <img
+                src="https://loremflickr.com/600/400/cheese,dosa?lock=308"
+                alt="Cheese Dosa">
+
+            <div class="food-info">
+
+                <h3>Cheese Dosa</h3>
+
+                <p>
+                    Crispy dosa loaded with
+                    melted cheese.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹160</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Cheese Dosa',160)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- IDIYAPPAM -->
+
+        <div class="food-card"
+             data-name="Idiyappam">
+
+            <img
+                src="https://loremflickr.com/600/400/idiyappam?lock=309"
+                alt="Idiyappam">
+
+            <div class="food-info">
+
+                <h3>Idiyappam</h3>
+
+                <p>
+                    Soft string hoppers served
+                    with coconut milk.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹100</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Idiyappam',100)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- APPAM -->
+
+        <div class="food-card"
+             data-name="Appam Coconut Milk">
+
+            <img
+                src="https://loremflickr.com/600/400/appam?lock=310"
+                alt="Appam">
+
+            <div class="food-info">
+
+                <h3>Appam & Coconut Milk</h3>
+
+                <p>
+                    Soft appam served with
+                    sweet coconut milk.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹120</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Appam & Coconut Milk',120)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PANIYARAM -->
+
+        <div class="food-card"
+             data-name="Kuzhi Paniyaram">
+
+            <img
+                src="https://loremflickr.com/600/400/paniyaram?lock=311"
+                alt="Paniyaram">
+
+            <div class="food-info">
+
+                <h3>Kuzhi Paniyaram</h3>
+
+                <p>
+                    Soft and crispy paniyaram
+                    served with chutney.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹90</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Kuzhi Paniyaram',90)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- VEG NOODLES -->
+
+        <div class="food-card"
+             data-name="Veg Noodles">
+
+            <img
+                src="https://loremflickr.com/600/400/vegetable,noodles?lock=312"
+                alt="Veg Noodles">
+
+            <div class="food-info">
+
+                <h3>Veg Noodles</h3>
+
+                <p>
+                    Hot noodles tossed with
+                    fresh vegetables.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹150</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Veg Noodles',150)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FRIED RICE -->
+
+        <div class="food-card"
+             data-name="Veg Fried Rice">
+
+            <img
+                src="https://loremflickr.com/600/400/vegetable,fried,rice?lock=313"
+                alt="Veg Fried Rice">
+
+            <div class="food-info">
+
+                <h3>Veg Fried Rice</h3>
+
+                <p>
+                    Fried rice with fresh
+                    vegetables and sauces.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹150</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Veg Fried Rice',150)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MINI TIFFIN -->
+
+        <div class="food-card"
+             data-name="Dinner Mini Tiffin">
+
+            <img
+                src="https://loremflickr.com/600/400/south,indian,tiffin?lock=314"
+                alt="Mini Tiffin">
+
+            <div class="food-info">
+
+                <h3>Mini Tiffin</h3>
+
+                <p>
+                    Idly, vada, dosa and pongal
+                    served together.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹180</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Mini Tiffin',180)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<div class="back-home">
+
+    <a href="index.html" class="main-btn">
+        ← Back To Home
+    </a>
+
+</div>
+
+
+<footer>
+
+    <h3>🍽️ ELITE FOOD COURT</h3>
+
+    <p>
+        Authentic South Indian Food With Love ❤️
+    </p>
+
+    <p>
+        © 2026 Elite Food Court
+    </p>
+
+</footer>
+
+
+<!-- CART -->
+
+<div class="popup" id="cartPopup">
+
+    <div class="popup-box">
+
+        <button class="close"
+                onclick="closePopup('cartPopup')">
+            ×
+        </button>
+
+        <h2>Your Cart 🛒</h2>
+
+        <p>Your selected foods</p>
+
+        <div id="cartItems"></div>
+
+        <h3 id="cartTotal">
+            Total: ₹0
+        </h3>
+
+        <button class="main-btn"
+                onclick="checkout()">
+            Place Order
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="message" id="message"></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Elite Food Court - Offers</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        🍽️ <span>ELITE FOOD COURT</span>
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="breakfast.html">Breakfast</a>
+
+        <a href="lunch.html">Lunch</a>
+
+        <a href="dinner.html">Dinner</a>
+
+        <a href="drinks.html">Drinks</a>
+
+        <a href="offers.html" class="active-link">
+            Offers
+        </a>
+
+    </nav>
+
+    <div class="header-buttons">
+
+        <a href="login.html">
+            <button>Login</button>
+        </a>
+
+        <a href="profile.html">
+            <button>👤</button>
+        </a>
+
+        <button onclick="showCart()">
+            🛒 <span id="cartCount">0</span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<section class="page-title">
+
+    <p class="small-title">
+        SPECIAL DEALS
+    </p>
+
+    <h1>
+        Today's Offers 🎁
+    </h1>
+
+    <p>
+        Enjoy tasty food with exciting
+        discounts and special combos.
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <div class="heading">
+
+        <p>HOT OFFERS</p>
+
+        <h2>
+            Grab Your Favourite Deal 🔥
+        </h2>
+
+    </div>
+
+
+    <div class="offers-grid">
+
+
+        <!-- OFFER 1 -->
+
+        <div class="special-offer">
+
+            <div class="offer-icon">
+                🍳
+            </div>
+
+            <h3>
+                Breakfast Special
+            </h3>
+
+            <h2>
+                20% OFF
+            </h2>
+
+            <p>
+                Get 20% discount on breakfast
+                orders above ₹200.
+            </p>
+
+            <button
+                onclick="offerMessage()">
+
+                Get Offer
+
+            </button>
+
+        </div>
+
+
+        <!-- OFFER 2 -->
+
+        <div class="special-offer">
+
+            <div class="offer-icon">
+                🍛
+            </div>
+
+            <h3>
+                Lunch Combo
+            </h3>
+
+            <h2>
+                ₹299
+            </h2>
+
+            <p>
+                Meals + starter + drink
+                at just ₹299.
+            </p>
+
+            <button
+                onclick="addToCart('Lunch Combo',299)">
+
+                Add Combo
+
+            </button>
+
+        </div>
+
+
+        <!-- OFFER 3 -->
+
+        <div class="special-offer">
+
+            <div class="offer-icon">
+                🌙
+            </div>
+
+            <h3>
+                Dinner Family Deal
+            </h3>
+
+            <h2>
+                ₹499
+            </h2>
+
+            <p>
+                Delicious dinner combo
+                for the whole family.
+            </p>
+
+            <button
+                onclick="addToCart('Dinner Family Deal',499)">
+
+                Add Combo
+
+            </button>
+
+        </div>
+
+
+        <!-- OFFER 4 -->
+
+        <div class="special-offer">
+
+            <div class="offer-icon">
+                🥤
+            </div>
+
+            <h3>
+                Drinks Offer
+            </h3>
+
+            <h2>
+                BUY 2 GET 1
+            </h2>
+
+            <p>
+                Buy any two selected drinks
+                and get one free.
+            </p>
+
+            <button
+                onclick="offerMessage()">
+
+                Get Offer
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FAMILY COMBO -->
+
+<section class="combo">
+
+    <div>
+
+        <p>
+            ⭐ TODAY'S BEST COMBO
+        </p>
+
+        <h2>
+            Elite Family Feast 🍱
+        </h2>
+
+        <h3>
+            ₹599
+        </h3>
+
+        <p>
+            South Indian Meals + 2 Dosa +
+            2 Vada + 2 Drinks
+        </p>
+
+        <button
+            onclick="addToCart('Elite Family Feast',599)">
+
+            Add Combo 🛒
+
+        </button>
+
+    </div>
+
+
+    <div class="combo-emoji">
+        🍛
+    </div>
+
+</section>
+
+
+<div class="back-home">
+
+    <a href="index.html"
+       class="main-btn">
+
+        ← Back To Home
+
+    </a>
+
+</div>
+
+
+<footer>
+
+    <h3>🍽️ ELITE FOOD COURT</h3>
+
+    <p>
+        Authentic South Indian Food With Love ❤️
+    </p>
+
+    <p>
+        © 2026 Elite Food Court
+    </p>
+
+</footer>
+
+
+<!-- CART -->
+
+<div class="popup" id="cartPopup">
+
+    <div class="popup-box">
+
+        <button class="close"
+                onclick="closePopup('cartPopup')">
+            ×
+        </button>
+
+        <h2>
+            Your Cart 🛒
+        </h2>
+
+        <div id="cartItems"></div>
+
+        <h3 id="cartTotal">
+            Total: ₹0
+        </h3>
+
+        <button class="main-btn"
+                onclick="checkout()">
+
+            Place Order
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="message"
+     id="message">
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Elite Food Court - Drinks</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        🍽️ <span>ELITE FOOD COURT</span>
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="breakfast.html">
+            Breakfast
+        </a>
+
+        <a href="lunch.html">
+            Lunch
+        </a>
+
+        <a href="dinner.html">
+            Dinner
+        </a>
+
+        <a href="drinks.html"
+           class="active-link">
+            Drinks
+        </a>
+
+        <a href="offers.html">
+            Offers
+        </a>
+
+    </nav>
+
+    <div class="header-buttons">
+
+        <a href="login.html">
+            <button>Login</button>
+        </a>
+
+        <a href="profile.html">
+            <button>👤</button>
+        </a>
+
+        <button onclick="showCart()">
+            🛒 <span id="cartCount">0</span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<section class="page-title">
+
+    <p class="small-title">
+        REFRESH YOURSELF
+    </p>
+
+    <h1>
+        Fresh Drinks 🥤
+    </h1>
+
+    <p>
+        Hot coffee, refreshing juices
+        and delicious drinks.
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <div class="heading">
+
+        <p>DRINKS MENU</p>
+
+        <h2>
+            Refreshing Choices 😋
+        </h2>
+
+    </div>
+
+
+    <input
+        type="text"
+        id="search"
+        placeholder="🔍 Search drinks..."
+        onkeyup="searchFood()"
+    >
+
+
+    <div class="food-container">
+
+
+        <!-- FILTER COFFEE -->
+
+        <div class="food-card"
+             data-name="Filter Coffee">
+
+            <img
+                src="https://loremflickr.com/600/400/filter,coffee?lock=401"
+                alt="Filter Coffee">
+
+            <div class="food-info">
+
+                <h3>Filter Coffee</h3>
+
+                <p>
+                    Traditional South Indian
+                    filter coffee.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹50</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Filter Coffee',50)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TEA -->
+
+        <div class="food-card"
+             data-name="Masala Tea">
+
+            <img
+                src="https://loremflickr.com/600/400/masala,tea?lock=402"
+                alt="Masala Tea">
+
+            <div class="food-info">
+
+                <h3>Masala Tea</h3>
+
+                <p>
+                    Hot tea prepared with
+                    aromatic spices.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹40</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Masala Tea',40)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- LIME -->
+
+        <div class="food-card"
+             data-name="Fresh Lime Juice">
+
+            <img
+                src="https://loremflickr.com/600/400/lime,juice?lock=403"
+                alt="Fresh Lime Juice">
+
+            <div class="food-info">
+
+                <h3>Fresh Lime Juice</h3>
+
+                <p>
+                    Fresh and refreshing
+                    lime juice.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹60</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Fresh Lime Juice',60)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MANGO -->
+
+        <div class="food-card"
+             data-name="Mango Juice">
+
+            <img
+                src="https://loremflickr.com/600/400/mango,juice?lock=404"
+                alt="Mango Juice">
+
+            <div class="food-info">
+
+                <h3>Mango Juice</h3>
+
+                <p>
+                    Fresh mango juice with
+                    natural sweetness.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹80</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Mango Juice',80)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ORANGE -->
+
+        <div class="food-card"
+             data-name="Orange Juice">
+
+            <img
+                src="https://loremflickr.com/600/400/orange,juice?lock=405"
+                alt="Orange Juice">
+
+            <div class="food-info">
+
+                <h3>Orange Juice</h3>
+
+                <p>
+                    Fresh orange juice
+                    served chilled.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹80</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Orange Juice',80)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ROSE MILK -->
+
+        <div class="food-card"
+             data-name="Rose Milk">
+
+            <img
+                src="https://loremflickr.com/600/400/rose,milk?lock=406"
+                alt="Rose Milk">
+
+            <div class="food-info">
+
+                <h3>Rose Milk</h3>
+
+                <p>
+                    Sweet and chilled
+                    rose flavoured milk.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹70</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Rose Milk',70)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BADAM MILK -->
+
+        <div class="food-card"
+             data-name="Badam Milk">
+
+            <img
+                src="https://loremflickr.com/600/400/badam,milk?lock=407"
+                alt="Badam Milk">
+
+            <div class="food-info">
+
+                <h3>Badam Milk</h3>
+
+                <p>
+                    Creamy milk with
+                    delicious badam flavour.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹90</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Badam Milk',90)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BUTTERMILK -->
+
+        <div class="food-card"
+             data-name="Buttermilk">
+
+            <img
+                src="https://loremflickr.com/600/400/buttermilk?lock=408"
+                alt="Buttermilk">
+
+            <div class="food-info">
+
+                <h3>Buttermilk</h3>
+
+                <p>
+                    Cool traditional
+                    South Indian buttermilk.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹40</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Buttermilk',40)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- LASSI -->
+
+        <div class="food-card"
+             data-name="Sweet Lassi">
+
+            <img
+                src="https://loremflickr.com/600/400/lassi?lock=409"
+                alt="Sweet Lassi">
+
+            <div class="food-info">
+
+                <h3>Sweet Lassi</h3>
+
+                <p>
+                    Thick and creamy
+                    sweet lassi.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹90</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Sweet Lassi',90)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- COLD COFFEE -->
+
+        <div class="food-card"
+             data-name="Cold Coffee">
+
+            <img
+                src="https://loremflickr.com/600/400/cold,coffee?lock=410"
+                alt="Cold Coffee">
+
+            <div class="food-info">
+
+                <h3>Cold Coffee</h3>
+
+                <p>
+                    Chilled creamy coffee
+                    with a rich flavour.
+                </p>
+
+                <div class="food-bottom">
+
+                    <b>₹100</b>
+
+                    <button class="like-btn"
+                            onclick="likeFood(this)">
+                        ♡
+                    </button>
+
+                    <button onclick="addToCart('Cold Coffee',100)">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<div class="back-home">
+
+    <a href="index.html"
+       class="main-btn">
+        ← Back To Home
+    </a>
+
+</div>
+
+
+<footer>
+
+    <h3>🍽️ ELITE FOOD COURT</h3>
+
+    <p>
+        Authentic South Indian Food With Love ❤️
+    </p>
+
+    <p>
+        © 2026 Elite Food Court
+    </p>
+
+</footer>
+
+
+<div class="popup" id="cartPopup">
+
+    <div class="popup-box">
+
+        <button class="close"
+                onclick="closePopup('cartPopup')">
+            ×
+        </button>
+
+        <h2>Your Cart 🛒</h2>
+
+        <div id="cartItems"></div>
+
+        <h3 id="cartTotal">
+            Total: ₹0
+        </h3>
+
+        <button class="main-btn"
+                onclick="checkout()">
+            Place Order
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="message" id="message"></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

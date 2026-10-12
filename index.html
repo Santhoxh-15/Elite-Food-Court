@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Elite Food Court - Home</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+        🍽️ <span>ELITE FOOD COURT</span>
+    </div>
+
+    <nav>
+
+        <a href="index.html" class="active-link">Home</a>
+
+        <a href="breakfast.html">Breakfast</a>
+
+        <a href="lunch.html">Lunch</a>
+
+        <a href="dinner.html">Dinner</a>
+
+        <a href="drinks.html">Drinks</a>
+
+        <a href="offers.html">offers</a>
+
+    </nav>
+
+    <div class="header-buttons">
+
+        <a href="login.html">
+            <button>Login</button>
+        </a>
+
+        <a href="profile.html">
+            <button>👤</button>
+        </a>
+
+        <button onclick="showCart()">
+            🛒 <span id="cartCount">0</span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-text">
+
+        <p class="small-title">
+            WELCOME TO ELITE FOOD COURT
+        </p>
+
+        <h1>
+            Authentic South Indian
+            <br>
+            <span>Food With Love ❤️</span>
+        </h1>
+
+        <p>
+            Fresh, tasty and traditional food
+            for every food lover.
+        </p>
+
+        <a href="breakfast.html" class="main-btn">
+            Explore Menu
+        </a>
+
+    </div>
+
+
+    <div class="hero-food">
+
+        <img
+            src="bannerphoto2.jpg"
+            alt="South Indian Food"
+        >
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOD CATEGORIES ================= -->
+
+<section class="section">
+
+    <div class="heading">
+
+        <p>EXPLORE OUR MENU</p>
+
+        <h2>What Would You Like Today? 😋</h2>
+
+    </div>
+
+
+    <div class="home-categories">
+
+
+        <a href="breakfast.html"
+           class="home-category">
+
+            <div class="category-icon">
+                🍳
+            </div>
+
+            <h3>Breakfast</h3>
+
+            <p>
+                Start your day with delicious
+                South Indian breakfast.
+            </p>
+
+            <span>
+                View Foods →
+            </span>
+
+        </a>
+
+
+        <a href="lunch.html"
+           class="home-category">
+
+            <div class="category-icon">
+                🍛
+            </div>
+
+            <h3>Lunch</h3>
+
+            <p>
+                Enjoy traditional meals and
+                tasty lunch varieties.
+            </p>
+
+            <span>
+                View Foods →
+            </span>
+
+        </a>
+
+
+        <a href="dinner.html"
+           class="home-category">
+
+            <div class="category-icon">
+                🌙
+            </div>
+
+            <h3>Dinner</h3>
+
+            <p>
+                End your day with delicious
+                dinner favourites.
+            </p>
+
+            <span>
+                View Foods →
+            </span>
+
+        </a>
+
+
+        <a href="drinks.html"
+           class="home-category">
+
+            <div class="category-icon">
+                🥤
+            </div>
+
+            <h3>Drinks</h3>
+
+            <p>
+                Refresh yourself with our
+                cool and hot drinks.
+            </p>
+
+            <span>
+                View Drinks →
+            </span>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= OFFER ================= -->
+
+<section class="section">
+
+    <div class="heading">
+
+        <p>HOT OFFER</p>
+
+        <h2>Today's Special 🎁</h2>
+
+    </div>
+
+
+    <div class="offer-box">
+
+        <div>
+
+            <p class="small-title">
+                LIMITED TIME OFFER
+            </p>
+
+            <h3>
+                Get 20% OFF
+            </h3>
+
+            <p>
+                Enjoy 20% discount on breakfast
+                orders above ₹200.
+            </p>
+
+            <a href="offers.html"
+               class="main-btn">
+
+                View Offers
+
+            </a>
+
+        </div>
+
+
+        <div class="offer-food">
+            🥞
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COMBO ================= -->
+
+<section class="combo">
+
+    <div>
+
+        <p>BEST VALUE COMBO</p>
+
+        <h2>
+            Elite Family Combo 🍱
+        </h2>
+
+        <h3>
+            Only ₹499
+        </h3>
+
+        <p>
+            2 Masala Dosa + 2 Idly +
+            2 Vada + 2 Coffee
+        </p>
+
+        <button
+            onclick="addToCart('Elite Family Combo',499)">
+
+            Add Combo 🛒
+
+        </button>
+
+    </div>
+
+
+    <div class="combo-emoji">
+        🍛
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about">
+
+    <div>
+
+        <p class="small-title">
+            ABOUT ELITE FOOD COURT
+        </p>
+
+        <h2>
+            Traditional Taste ❤️
+        </h2>
+
+        <p>
+            Elite Food Court brings authentic
+            South Indian flavours to your table
+            with fresh ingredients, traditional
+            recipes and lots of love.
+        </p>
+
+        <br>
+
+        <a href="#home"
+           class="main-btn">
+
+            Back To Top ↑
+
+        </a>
+
+    </div>
+
+
+    <div class="about-card">
+
+        <b>50+</b>
+        <span>Food Items</span>
+
+        <b>1000+</b>
+        <span>Happy Customers</span>
+
+        <b>10+</b>
+        <span>Years Experience</span>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h3>
+        🍽️ ELITE FOOD COURT
+    </h3>
+
+    <p>
+        Authentic South Indian Food With Love ❤️
+    </p>
+
+    <p>
+        © 2026 Elite Food Court
+    </p>
+
+</footer>
+
+
+<!-- ================= CART POPUP ================= -->
+
+<div class="popup" id="cartPopup">
+
+    <div class="popup-box">
+
+        <button
+            class="close"
+            onclick="closePopup('cartPopup')">
+
+            ×
+
+        </button>
+
+
+        <h2>
+            Your Cart 🛒
+        </h2>
+
+        <p>
+            Your selected foods
+        </p>
+
+
+        <div id="cartItems">
+
+        </div>
+
+
+        <h3 id="cartTotal">
+            Total: ₹0
+        </h3>
+
+
+        <button
+            class="main-btn"
+            onclick="checkout()">
+
+            Place Order
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- MESSAGE -->
+
+<div
+    class="message"
+    id="message">
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

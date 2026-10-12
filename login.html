@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Elite Food Court - Login</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body class="login-body">
+
+
+<div class="login-container">
+
+    <div class="login-card">
+
+        <div class="login-logo">
+            🍽️
+        </div>
+
+        <h1>
+            Elite Food Court
+        </h1>
+
+        <p>
+            Welcome back! Login to continue.
+        </p>
+
+
+        <form onsubmit="loginUser(event)">
+
+            <label>
+                Name
+            </label>
+
+            <input
+                type="text"
+                id="loginName"
+                placeholder="Enter your name"
+                required
+            >
+
+
+            <label>
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="loginEmail"
+                placeholder="Enter your email"
+                required
+            >
+
+
+            <label>
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Enter password"
+                required
+            >
+
+
+            <button
+                type="submit"
+                class="main-btn">
+
+                Login
+
+            </button>
+
+        </form>
+
+
+        <p class="login-note">
+            New customer? Create your profile after login.
+        </p>
+
+
+        <a href="index.html"
+           class="back-link">
+
+            ← Back To Home
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<div class="message"
+     id="message">
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
